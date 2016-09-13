@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> Calcolatrice spedizione</string>
+    <string name="added_cost"> Costo aggiunto :</string>
+    <string name="base_view">Costo base:</string>
+    <string name="title_view"> Peso del pacchetto</string>
+    <string name="total_cost"> Costo totale:</string>
+    <string name="under_text_view"> ( In once )</string>
+</resources>

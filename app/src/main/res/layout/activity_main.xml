@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.orangecoastcollege.cs273.gbyers.shippingcalculator.MainActivity"
+    android:background="@drawable/shipping_background"
+    android:padding="10dp"
+    android:gravity="right">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_view"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="23sp"
+        android:paddingLeft="75dp"
+        android:id="@+id/textView"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weight_edit_text"
+        android:layout_centerHorizontal="true"
+        android:hint="0"
+        android:padding="20dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:selectAllOnFocus="true"
+        android:focusable="true"
+        android:inputType="number"
+        android:singleLine="false"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/under_text_view"
+        android:id="@+id/textView2"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/weight_edit_text"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Base Cost:"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:id="@+id/textView3"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Added Cost:"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Shipping Cost:"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/base_cost"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignRight="@+id/weight_edit_text"
+        android:layout_alignEnd="@+id/weight_edit_text"
+        android:gravity="right"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/added_cost"
+        android:gravity="right"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_above="@+id/textView5"
+        android:layout_alignRight="@+id/base_cost"
+        android:layout_alignEnd="@+id/base_cost"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/total_cost"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignRight="@+id/added_cost"
+        android:layout_alignEnd="@+id/added_cost"
+        android:gravity="right"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
