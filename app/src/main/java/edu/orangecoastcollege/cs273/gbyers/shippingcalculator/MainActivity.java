@@ -7,7 +7,12 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+
 public class MainActivity extends AppCompatActivity {
+
+    //add currency format for locale (could use Local.US as parameter)
+    private static NumberFormat currency = NumberFormat.getCurrencyInstance();
 
     //Associate Controller with neede views
     private EditText weightEditText;
@@ -38,9 +43,13 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-        double weightOunces = Double.parseDouble(charSequence.toString());
-            packageOne.setWeight(weightOunces);
-
+            try{
+                double weightOunces = Double.parseDouble(charSequence.toString());
+                packageOne.setWeight(weightOunces);
+            }catch(NumberFormatException e){
+                weightEditText.setText("");
+            }
+            updateViews();
         }
 
         @Override
@@ -48,4 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
+private void updateViews()
+{
+    baseCost.setText(currency.format(packageOne.getBaseCost()));
+    addedCost.setText(currency.format(packageOne.getAddedCost()));
+    totalCost.setText(currency.format(packageOne.getTotal()));
+}
 }
